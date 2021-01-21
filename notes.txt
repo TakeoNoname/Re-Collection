@@ -1,0 +1,7 @@
+Resolution
+	-5:4
+	-1280x1024
+
+Gameplay
+	-Zoomed out locked camera (Legend of Zelda-esque)
+	-
