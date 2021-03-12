@@ -22,7 +22,7 @@ public class Movement : MonoBehaviour
         vertical = Input.GetAxisRaw("Vertical");
         horizontal = Input.GetAxisRaw("Horizontal");
 
-        player.transform.Translate(horizontal / 7.5f, vertical / 7.5f, 0);
+        player.transform.Translate(horizontal / 10f, vertical / 10f, 0);
     }
 
     public void Update()
