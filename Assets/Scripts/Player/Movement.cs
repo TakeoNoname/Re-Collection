@@ -10,6 +10,8 @@ public class Movement : MonoBehaviour
     float horizontal = 0f;
     float vertical = 0f;
 
+    public bool paused = false;
+
     bool isWalkingLeft = false;
     bool isWalkingRight = false;
     bool isWalkingUp = false;
@@ -25,7 +27,9 @@ public class Movement : MonoBehaviour
 
     public void Update()
     {
-        player.GetComponent<Animator>().ResetTrigger("idle");
+        if (!paused)
+        {
+            player.GetComponent<Animator>().ResetTrigger("idle");
 
             if (Input.GetKeyDown(KeyCode.A))
             {
@@ -76,6 +80,8 @@ public class Movement : MonoBehaviour
 
             if (!isWalkingDown && !isWalkingUp && !isWalkingLeft && !isWalkingRight)
                 player.GetComponent<Animator>().SetTrigger("idle");
+
+        }
         
     }
 

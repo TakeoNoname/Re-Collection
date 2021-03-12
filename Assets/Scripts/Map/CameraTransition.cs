@@ -52,4 +52,22 @@ public class CameraTransition : MonoBehaviour
         cameraMoving = true;
         playerMovement.SetActive(false);
     }
+
+    public void MoveCameraUp()
+    {
+        player.GetComponent<BoxCollider2D>().enabled = false;
+        newPosition = new Vector3(0, 10f, 0);
+        newPlayerPosition = new Vector3(0, 2f, 0);
+        cameraMoving = true;
+        playerMovement.SetActive(false);
+    }
+
+    public void MoveCameraDown()
+    {
+        player.GetComponent<BoxCollider2D>().enabled = false;
+        newPosition = new Vector3(0, -10f, 0);
+        newPlayerPosition = new Vector3(0, -2f, 0);
+        cameraMoving = true;
+        playerMovement.SetActive(false);
+    }
 }
