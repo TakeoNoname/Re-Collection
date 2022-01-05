@@ -39,7 +39,7 @@ public class CameraTransition : MonoBehaviour
     {
         player.GetComponent<BoxCollider2D>().enabled = false;
         newPosition = new Vector3(-12.479001f, 0, 0);
-        newPlayerPosition = new Vector3(-1.5f, 0, 0);
+        newPlayerPosition = new Vector3(-2f, 0, 0);
         cameraMoving = true;
         playerMovement.SetActive(false);      
     }
@@ -48,7 +48,7 @@ public class CameraTransition : MonoBehaviour
     {
         player.GetComponent<BoxCollider2D>().enabled = false;
         newPosition = new Vector3(12.479001f, 0, 0);
-        newPlayerPosition = new Vector3(1.5f, 0, 0);
+        newPlayerPosition = new Vector3(2f, 0, 0);
         cameraMoving = true;
         playerMovement.SetActive(false);
     }
