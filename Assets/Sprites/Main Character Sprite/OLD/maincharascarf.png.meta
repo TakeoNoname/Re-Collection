@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: c00da2217f0efab48bab9f9bb407a677
+guid: 1f71f53f5b4c3a443a845afb5a924971
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9171500689510267863
-    second: maincharasidescarfidle_0
+      213: -3858042894002734725
+    second: maincharascarf_0
   - first:
-      213: 701435748144299347
-    second: maincharasidescarfidle_1
+      213: -1318366703712960755
+    second: maincharascarf_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -38,9 +38,9 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -61,6 +61,8 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
@@ -107,12 +109,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: maincharasidescarfidle_0
+      name: maincharascarf_0
       rect:
         serializedVersion: 2
-        x: 24
+        x: 6
         y: 0
-        width: 72
+        width: 78
         height: 90
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -121,19 +123,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9248d7037b848b080800000000000000
-      internalID: -9171500689510267863
+      spriteID: b793fbebd6a757ac0800000000000000
+      internalID: -3858042894002734725
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: maincharasidescarfidle_1
+      name: maincharascarf_1
       rect:
         serializedVersion: 2
-        x: 120
+        x: 108
         y: 0
-        width: 72
+        width: 78
         height: 90
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -142,8 +144,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 35db6e8b8100cb900800000000000000
-      internalID: 701435748144299347
+      spriteID: d0f7c7dc77834bde0800000000000000
+      internalID: -1318366703712960755
       vertices: []
       indices: 
       edges: []

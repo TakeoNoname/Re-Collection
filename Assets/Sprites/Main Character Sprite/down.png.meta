@@ -1,13 +1,16 @@
 fileFormatVersion: 2
-guid: f96aaea8a047e144e8a6e4d23854fdfe
+guid: c85a51a6d0926c84396dbc548f74ece8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1225473120084560320
-    second: maincharasidescarf_0
+      213: 357006442158401228
+    second: down_0
   - first:
-      213: 5186535061293589722
-    second: maincharasidescarf_1
+      213: 8354682349897007965
+    second: down_1
+  - first:
+      213: 2054469761511534075
+    second: down_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -38,9 +41,9 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -52,7 +55,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 40
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -61,6 +64,8 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
@@ -91,29 +96,17 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: maincharasidescarf_0
+      name: down_0
       rect:
         serializedVersion: 2
-        x: 24
+        x: 0
         y: 0
-        width: 72
-        height: 90
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,20 +114,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 046f19ba0be3efee0800000000000000
-      internalID: -1225473120084560320
+      spriteID: cc6a067b77754f400800000000000000
+      internalID: 357006442158401228
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: maincharasidescarf_1
+      name: down_1
       rect:
         serializedVersion: 2
-        x: 114
+        x: 16
         y: 0
-        width: 78
-        height: 84
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,8 +135,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ad46387a8264af740800000000000000
-      internalID: 5186535061293589722
+      spriteID: d5346dc055bc1f370800000000000000
+      internalID: 8354682349897007965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: down_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfd2da0fc51f28c10800000000000000
+      internalID: 2054469761511534075
       vertices: []
       indices: 
       edges: []

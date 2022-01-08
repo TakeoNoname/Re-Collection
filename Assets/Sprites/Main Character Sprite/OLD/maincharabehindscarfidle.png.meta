@@ -1,13 +1,19 @@
 fileFormatVersion: 2
-guid: 1f71f53f5b4c3a443a845afb5a924971
+guid: f38b6561434914c4b9f1a92a0cb0a9ab
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3858042894002734725
-    second: maincharascarf_0
+      213: -4928030574777810581
+    second: maincharabehindscarfidle_0
   - first:
-      213: -1318366703712960755
-    second: maincharascarf_1
+      213: -1575272453155347137
+    second: maincharabehindscarfidle_1
+  - first:
+      213: -3102671786587907849
+    second: maincharabehindscarfidle_2
+  - first:
+      213: 277242475290647555
+    second: maincharabehindscarfidle_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -38,9 +44,9 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -61,6 +67,8 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
@@ -107,12 +115,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: maincharascarf_0
+      name: maincharabehindscarfidle_0
       rect:
         serializedVersion: 2
-        x: 6
+        x: 12
         y: 0
-        width: 78
+        width: 72
         height: 90
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -121,17 +129,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b793fbebd6a757ac0800000000000000
-      internalID: -3858042894002734725
+      spriteID: b61ca145d4e1c9bb0800000000000000
+      internalID: -4928030574777810581
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: maincharascarf_1
+      name: maincharabehindscarfidle_1
       rect:
         serializedVersion: 2
-        x: 108
+        x: 102
         y: 0
         width: 78
         height: 90
@@ -142,8 +150,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d0f7c7dc77834bde0800000000000000
-      internalID: -1318366703712960755
+      spriteID: f35a73dcc02832ae0800000000000000
+      internalID: -1575272453155347137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maincharabehindscarfidle_2
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 0
+        width: 72
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f81dc1e27811f4d0800000000000000
+      internalID: -3102671786587907849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maincharabehindscarfidle_3
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 0
+        width: 78
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30c5958ff86f8d300800000000000000
+      internalID: 277242475290647555
       vertices: []
       indices: 
       edges: []
