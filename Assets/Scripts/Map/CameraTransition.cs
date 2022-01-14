@@ -38,7 +38,7 @@ public class CameraTransition : MonoBehaviour
     public void MoveCameraLeft()
     {
         player.GetComponent<BoxCollider2D>().enabled = false;
-        newPosition = new Vector3(-12.479001f, 0, 0);
+        newPosition = new Vector3(-10f, 0, 0);
         newPlayerPosition = new Vector3(-2f, 0, 0);
         cameraMoving = true;
         playerMovement.SetActive(false);      
@@ -47,7 +47,7 @@ public class CameraTransition : MonoBehaviour
     public void MoveCameraRight()
     {
         player.GetComponent<BoxCollider2D>().enabled = false;
-        newPosition = new Vector3(12.479001f, 0, 0);
+        newPosition = new Vector3(10f, 0, 0);
         newPlayerPosition = new Vector3(2f, 0, 0);
         cameraMoving = true;
         playerMovement.SetActive(false);
@@ -56,8 +56,8 @@ public class CameraTransition : MonoBehaviour
     public void MoveCameraUp()
     {
         player.GetComponent<BoxCollider2D>().enabled = false;
-        newPosition = new Vector3(0, 10f, 0);
-        newPlayerPosition = new Vector3(0, 2f, 0);
+        newPosition = new Vector3(0, 9f, 0);
+        newPlayerPosition = new Vector3(0, 1.8f, 0);
         cameraMoving = true;
         playerMovement.SetActive(false);
     }
@@ -65,8 +65,8 @@ public class CameraTransition : MonoBehaviour
     public void MoveCameraDown()
     {
         player.GetComponent<BoxCollider2D>().enabled = false;
-        newPosition = new Vector3(0, -10f, 0);
-        newPlayerPosition = new Vector3(0, -2f, 0);
+        newPosition = new Vector3(0, -9f, 0);
+        newPlayerPosition = new Vector3(0, -1.8f, 0);
         cameraMoving = true;
         playerMovement.SetActive(false);
     }
