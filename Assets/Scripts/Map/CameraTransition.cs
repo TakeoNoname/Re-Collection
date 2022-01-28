@@ -29,7 +29,7 @@ public class CameraTransition : MonoBehaviour
                 cameraMoving = false;
                 playerMovement.SetActive(true);
                 player.GetComponent<BoxCollider2D>().enabled = true;
-                playerMovement.GetComponent<Movement>().IsNotWalking();
+                playerMovement.GetComponent<Movement>().CheckIfWalking();
                 iterator = 0;
             }
         }

@@ -12,10 +12,18 @@ public class Movement : MonoBehaviour
 
     public bool paused = false;
 
-    bool isWalkingLeft = false;
-    bool isWalkingRight = false;
-    bool isWalkingUp = false;
-    bool isWalkingDown = false;
+    bool isWalkingLeft;
+    bool isWalkingRight;
+    bool isWalkingUp;
+    bool isWalkingDown;
+
+    public void Start()
+    {
+        isWalkingLeft = player.GetComponent<Animator>().GetBool("isWalkingLeft");
+        isWalkingRight = player.GetComponent<Animator>().GetBool("isWalkingRight");
+        isWalkingUp = player.GetComponent<Animator>().GetBool("isWalkingUp");
+        isWalkingDown = player.GetComponent<Animator>().GetBool("isWalkingDown");
+    }
 
     public void FixedUpdate()
     {
@@ -61,35 +69,75 @@ public class Movement : MonoBehaviour
             {
                 player.GetComponent<Animator>().SetBool("isWalkingLeft", false);
                 isWalkingLeft = false;
+
+                CheckForNewAnimation();
             }
             if (Input.GetKeyUp(KeyCode.D))
             {
                 player.GetComponent<Animator>().SetBool("isWalkingRight", false);
                 isWalkingRight = false;
+
+                CheckForNewAnimation();
             }
             if (Input.GetKeyUp(KeyCode.W))
             {
                 player.GetComponent<Animator>().SetBool("isWalkingUp", false);
                 isWalkingUp = false;
+
+                CheckForNewAnimation();
             }
             if (Input.GetKeyUp(KeyCode.S))
             {
                 player.GetComponent<Animator>().SetBool("isWalkingDown", false);
                 isWalkingDown = false;
+
+                CheckForNewAnimation();
             }
 
             if (!isWalkingDown && !isWalkingUp && !isWalkingLeft && !isWalkingRight)
                 player.GetComponent<Animator>().SetTrigger("idle");
 
+
+            // Fixes issue where holding opposite directions uses walking animation in place
+            if(isWalkingDown && isWalkingUp || isWalkingLeft && isWalkingRight)
+                player.GetComponent<Animator>().SetTrigger("idle");
         }
         
     }
 
-    public void IsNotWalking()
+    private void CheckForNewAnimation()
     {
-        isWalkingDown = false;
-        isWalkingLeft = false;
-        isWalkingRight = false;
-        isWalkingUp = false;
+        if (Input.GetKey(KeyCode.A))
+            player.GetComponent<Animator>().SetTrigger("walkLeft");
+        if (Input.GetKey(KeyCode.D))
+            player.GetComponent<Animator>().SetTrigger("walkRight");
+        if (Input.GetKey(KeyCode.W))
+            player.GetComponent<Animator>().SetTrigger("walkUp");
+        if (Input.GetKey(KeyCode.S))
+            player.GetComponent<Animator>().SetTrigger("walkDown");
+    }
+
+    public void CheckIfWalking()
+    {
+        if (!Input.GetKey(KeyCode.A))
+        {
+            player.GetComponent<Animator>().SetBool("isWalkingLeft", false);
+            isWalkingLeft = false;
+        }
+        if (!Input.GetKey(KeyCode.D))
+        {
+            player.GetComponent<Animator>().SetBool("isWalkingRight", false);
+            isWalkingRight = false;
+        }
+        if (!Input.GetKey(KeyCode.W))
+        {
+            player.GetComponent<Animator>().SetBool("isWalkingUp", false);
+            isWalkingUp = false;
+        }
+        if (!Input.GetKey(KeyCode.S))
+        {
+            player.GetComponent<Animator>().SetBool("isWalkingDown", false);
+            isWalkingDown = false;
+        }
     }
 }

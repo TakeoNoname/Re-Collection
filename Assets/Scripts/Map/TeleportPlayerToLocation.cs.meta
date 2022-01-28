@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 631a6baf62d73264ba78ca45d7bbe61e
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - FadeOutInScreen: {fileID: 8119457375850148389, guid: da98b38291d17bd43a106494d49ead11, type: 3}
+  - mainCamera: {fileID: 5465935522754619748, guid: b6ea3aa1e7390ca46a5e8ec898dba8e6, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
