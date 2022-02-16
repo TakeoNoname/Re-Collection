@@ -5,21 +5,20 @@ using UnityEngine;
 
 public class DialogueParser : MonoBehaviour
 {
-    private const int MaxCharactersPerLine = 145;
+    private const int MaxCharactersPerLine = 145;   // Max characters to fit into a text box
 
     private UnityEngine.UI.Text MainTextContainer;
 
     private bool IsReadyToAdvanceTextFlag = false;  // Flag to check if the parser is waiting on user input to advance text
     private bool IsTextToDisplayFlag = false;   // Flag to check if there is still text left to display
 
-    public bool FinishInteraction = false;
+    public bool FinishInteraction = false;  // Flag to determine if an NPC interaction is finished.
 
     private List<string> textToDisplay;
     private int textToDisplayIndex = 0;
 
     private void Awake()
     {
-        var test = transform.GetChild(0);
         MainTextContainer = transform.GetChild(0).GetComponent<UnityEngine.UI.Text>();
     }
 
@@ -54,8 +53,6 @@ public class DialogueParser : MonoBehaviour
     private IEnumerator PrintDialogue_TypeWriter()
     {
         MainTextContainer.text = "";
-
-        Debug.Log("Printing dialogue!");
 
         int messageLength = textToDisplay[textToDisplayIndex].Length;
         int messageCharacterIndex = 0;
