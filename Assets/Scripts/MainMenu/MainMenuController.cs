@@ -9,18 +9,18 @@ public class MainMenuController : MonoBehaviour
 
     public void PlayGameButtonClick()
     {
-        // For test purposes only
+        // For testing purposes only
         SceneManager.LoadScene("Overworld");
     }
 
     public void OptionsButtonClick()
     {
-
+        // Implement later
     }
 
     public void ExitGameButtonClick()
     {
-        // For Testing purposes only
+        // For testing purposes only
         Application.Quit();
     }
 }

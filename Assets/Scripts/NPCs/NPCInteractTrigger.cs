@@ -4,13 +4,22 @@ using UnityEngine;
 
 public class NPCInteractTrigger : MonoBehaviour
 {
-    public void OnTriggerStay2D(Collider2D collision)
-    {
-        Debug.Log("I'm touching you!");
+    private bool IsInteractable = false;
 
-        if (collision.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.E))
-        {
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.E) && IsInteractable)
             transform.parent.GetComponent<InstanceNPCController>().InteractWithNPC();
-        }
+    }
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+            IsInteractable = true;
+    }
+
+    public void OnTriggerExit2D(Collider2D collision)
+    {
+        IsInteractable = false;
     }
 }
