@@ -5,11 +5,17 @@ using UnityEngine;
 public class NPCInteractTrigger : MonoBehaviour
 {
     private bool IsInteractable = false;
+    private InstanceNPCController npcController;
+
+    private void Awake()
+    {
+        npcController = transform.parent.parent.GetComponent<InstanceNPCController>();
+    }
 
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.E) && IsInteractable)
-            transform.parent.GetComponent<InstanceNPCController>().InteractWithNPC();
+            npcController.InteractWithNPC();
     }
 
     public void OnTriggerEnter2D(Collider2D collision)

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - CollisionBox
   - NPC
+  - NPC_Patrol
   layers:
   - Default
   - TransparentFX
