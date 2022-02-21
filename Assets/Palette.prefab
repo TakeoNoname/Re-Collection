@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 506694015897905252}
   - component: {fileID: 6163657984743637461}
   m_Layer: 31
-  m_Name: Rectangular Palette
+  m_Name: Palette
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
