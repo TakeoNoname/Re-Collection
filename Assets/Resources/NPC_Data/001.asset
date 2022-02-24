@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NPC_ID: 001
   interactionType: 0
-  dialogue: My job was taken... BY A FROG                                                                
+  dialogue: My job was taken... BY A FROG!                                                                
     Damn his charisma
   npcName: Doug
   location: {x: 0, y: 0}

@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 4467fa2be98043f4db026be95a5c2f72
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Early GameBoy
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: b12c39a39de58624d8fac92cd0120f3a, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
