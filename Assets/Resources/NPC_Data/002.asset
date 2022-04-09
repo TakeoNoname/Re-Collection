@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: 002
   m_EditorClassIdentifier: 
   NPC_ID: 002
-  interactionType: 0
+  interactionType: 1
+  location: {x: 0, y: 0}
   dialogue: This is the first time a shop has been owned by a frog in these parts                                                                           
     Our town is becoming so progressive!
   npcName: Girl
-  location: {x: 0, y: 0}

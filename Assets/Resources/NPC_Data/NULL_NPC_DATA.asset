@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: NULL_NPC_DATA
   m_EditorClassIdentifier: 
   NPC_ID: 000
-  interactionType: 0
+  interactionType: 1
+  location: {x: 0, y: 0}
   dialogue: ERROR. NO NPC DATA FOUND.
   npcName: ERROR NPC NOT FOUND
-  location: {x: 0, y: 0}

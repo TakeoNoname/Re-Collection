@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class DialogueParser : MonoBehaviour
 {
-    private const int MaxCharactersPerLine = 145;   // Max characters to fit into a text box
+    private const int MaxCharactersPerLine = 87;   // Max characters to fit into a text box
 
     private UnityEngine.UI.Text MainTextContainer;
 
@@ -41,6 +41,17 @@ public class DialogueParser : MonoBehaviour
 
     // Method to be called by other classes that displays dialogue sent to it
     public void DisplayDialogue(string rawDialogue)
+    {
+        Time.timeScale = 0;
+
+        // This function divides each paragraph into lines of the correct length to be displayed in the text box
+        ParseRawDialogue(rawDialogue);
+
+        IsTextToDisplayFlag = true;
+        StartCoroutine(PrintDialogue_TypeWriter());
+    }
+
+    public void DisplayOneSidedDialogue(string rawDialogue)
     {
         Time.timeScale = 0;
         ParseRawDialogue(rawDialogue);
@@ -80,29 +91,40 @@ public class DialogueParser : MonoBehaviour
     {
         textToDisplay = new List<string>();
 
+        // Check if the paragraph contains a space to avoid errors
         if (paragraph.Contains(" "))
         {
+            // This character is where the iterator starts in the paragraph while dividing it up into segments.
             int startingChar = 0;
 
+            // This loop seperates the paragraph into sections to be displayed in order in the MainDialogueBox.
             for (double i = 0; i < ((double)paragraph.Length / (double)MaxCharactersPerLine); i++)
             {
+                // This is the position of the last space that fits inside of the segment.
                 int lastSpace = 0;
 
+                // This if statement describes the case that the first section has more characters than the MaxCharactersPerLine.
                 if (i == 0 && paragraph.Length - startingChar > MaxCharactersPerLine)
+                    // Find the last space in the section using the index value of the MaxCharactersPerLine.
                     lastSpace = FindLastSpace(paragraph, MaxCharactersPerLine);
+                // This else if statement describes the case that any section but the first has more characters than the MaxCharactersPerLine. 
                 else if (i > 0 && paragraph.Length - startingChar > MaxCharactersPerLine)
+                    // Find the last space in the section using the index value of the MaxCharactersPerLine plus the index value of the current starting character.
                     lastSpace = FindLastSpace(paragraph, startingChar + MaxCharactersPerLine);
+                // This else statement describes any other case.
                 else
+                    // Use the remaining length of the section as the value for the last space.
                     lastSpace = paragraph.Length;
 
-                string newLineContents = "";
+                // Create a variable to store the value of the new section.
+                string newSectionContents = "";
 
                 for (int j = startingChar; j < lastSpace; j++)
                 {
-                    newLineContents += paragraph[j];
+                    newSectionContents += paragraph[j];
                 }
 
-                textToDisplay.Add(newLineContents);
+                textToDisplay.Add(newSectionContents);
                 startingChar = lastSpace + 1;
             }
         }

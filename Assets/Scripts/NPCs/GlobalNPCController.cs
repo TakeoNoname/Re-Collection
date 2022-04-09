@@ -6,15 +6,19 @@ using System.Linq;
 public class GlobalNPCController : MonoBehaviour
 {
     public NPCScriptableObject npcData;
+    public SignScriptableObject signData;
+
     public GameObject MainDialogueBox;
 
     public bool IsInteracting = false;
 
     private List<NPCScriptableObject> npcDataList = new List<NPCScriptableObject>();
+    private List<SignScriptableObject> signDataList = new List<SignScriptableObject>();
 
     private void Start()
     {
         npcDataList.AddRange(Resources.LoadAll<NPCScriptableObject>("NPC_Data"));
+        signDataList.AddRange(Resources.LoadAll<SignScriptableObject>("Sign_Data"));
     }
     private void Update()
     {
@@ -38,15 +42,50 @@ public class GlobalNPCController : MonoBehaviour
         return npcDataList.Where(x => x.NPC_ID == "000").First();
     }
 
+    SignScriptableObject SearchSign(string npcId)
+    {
+        foreach (SignScriptableObject sign in signDataList)
+        {
+            if (sign.NPC_ID == npcId)
+                return sign;
+        }
+
+        // If sign is not found, return null sign data
+        return signDataList.Where(x => x.NPC_ID == "SIGN_000").First();
+    }
+
     // This method discerns the type of interaction the NPC data contains
     public void InteractWithNPC(string npcId)
     {
         IsInteracting = true;
 
-        npcData = SearchNPC(npcId);
+        if (npcId.StartsWith("SIGN"))
+        {
+            signData = SearchSign(npcId);
 
-        if (npcData.interactionType == NPCInteractionTypes.Speak)
-            SpeakToNPC(npcData);
+            ReadSign(npcData);
+        }
+        else
+        {
+            npcData = SearchNPC(npcId);
+
+            switch (npcData.interactionType)
+            {
+                case NPCInteractionTypes.Speak:
+                    SpeakToNPC(npcData);
+                    break;
+            }
+        }
+    }
+
+    // This NPC interaction is specifically for sign interactions and doesn't include multiple speakers
+    void ReadSign(NPCScriptableObject npcData)
+    {
+        // Make sure the main dialogue box is displayed
+        if (!MainDialogueBox.activeSelf)
+            MainDialogueBox.SetActive(true);
+
+        MainDialogueBox.GetComponent<DialogueParser>().DisplayDialogue(signData.dialogue);
     }
 
     // This NPC interaction initiates a conversation with the selected NPC data
@@ -60,4 +99,4 @@ public class GlobalNPCController : MonoBehaviour
     }
 }
 
-public enum NPCInteractionTypes { Speak, SpeakAndGiveItem, Custom };
+public enum NPCInteractionTypes { Sign, Speak, SpeakAndGiveItem, Custom };

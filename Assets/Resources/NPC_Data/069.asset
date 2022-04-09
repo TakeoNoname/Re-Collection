@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: 069
   m_EditorClassIdentifier: 
   NPC_ID: 069
-  interactionType: 0
+  interactionType: 1
+  location: {x: 0, y: 0}
   dialogue: SHHHH!! If anyone found out about my house fetish, i'd be ruined!                                                                               
     I'M SORRY, THE SHINGLES ARE TOO DAMN SEXY!
   npcName: Secret
-  location: {x: 0, y: 0}

@@ -9,11 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3eb101c045f869b4fbe9383752db44ac, type: 3}
-  m_Name: 001
-  m_EditorClassIdentifier: 
-  NPC_ID: 001
-  interactionType: 1
+  m_Script: {fileID: 0}
+  m_Name: SIGN_001
+  m_EditorClassIdentifier: Assembly-CSharp::SignScriptableObject
+  NPC_ID: SIGN_001
+  interactionType: 0
   location: {x: 0, y: 0}
-  dialogue: 
-  npcName: 
+  dialogue: This is a test sign!
